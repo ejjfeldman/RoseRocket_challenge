@@ -307,7 +307,7 @@ let boxRef=db.ref().child('allBoxes').child(String(boxCopy.id)).update(addItemWe
         <header className="App-header">
         <div className="topBar"><div className="userInfo">Signed in as user: <b>{this.state.user.id}</b></div></div>
         <h2>Welcome {this.state.user.name}!</h2>
-          <h1 className="App-title">Packtor trailers</h1>
+          <h1 className="App-title">PACKTOR TRAILERS</h1>
           <h3>Trucking, Tracking and Packing</h3>
           <p>{this.state.item}</p>
           

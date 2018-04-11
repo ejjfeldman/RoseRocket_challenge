@@ -38,19 +38,13 @@ render(){
             <div><b>{name}</b></div>
             <hr/>
             <div>Remaining Space: <b>{remainingWeight}</b> out of {weight} lbs</div>
-                {isActive
-                    ? 'Release to drop'
-                : ''}
 
-            {lastDroppedItem &&
-                (
-                    <ul>
-                <li className="itemsInBox" >Last Addition: {lastDroppedItem.name} ({(lastDroppedItem.weight)} lbs)</li>
-                </ul>
-            )}
 
             {thisBox.map(item=>
-                <div className="packagedBox" onClick={()=>this.props.removeBoxedItem(item)}> {item.name}</div>
+                <div className="packagedBox" onClick={()=>this.props.removeBoxedItem(item)}> 
+                <p><b>{item.name}</b></p>
+                <p>{item.weight} lbs</p>
+                </div>
             )}
 
         </div>
