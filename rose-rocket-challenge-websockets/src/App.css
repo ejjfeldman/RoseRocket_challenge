@@ -1,0 +1,163 @@
+.App {
+  text-align: center;
+}
+/* Header */
+.App-header {
+  background-color: #222;
+  height: 160px;
+  color: white;
+  padding-top: 40px;
+}
+
+.App-title {
+  font-size: 2em;
+}
+
+.userInfo{
+
+  margin-bottom: 10px; 
+  float: right;
+  padding:5px;
+}
+
+.topBar{
+  background: grey;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  margin: 0;
+}
+
+/* BoxList */
+.boxDisplay{
+  width: 41%;
+  float: left;
+  border: 1px black solid;
+  box-shadow: 5px 5px 5px gray;
+  overflow-y: auto;
+  /* overflow: visible; */
+  height: 500px;
+  margin: 2%;
+  padding: 1% 2%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch; */
+}
+/* Box */
+.oneBox{
+  border: 2px solid black;
+  width: 60%;
+  padding: 3%;
+  margin: 20px auto;
+  box-shadow: 15px 15px 20px black;
+}
+
+/* ItemList */
+.itemDisplay{
+  width: 41%;
+  float: right;
+  border: 1px black solid;
+  height: 500px;
+  overflow-y:auto;
+  margin: 2%;
+  box-shadow: 5px 5px 5px gray;
+  padding: 1% 2%;
+  
+  
+}
+
+/* Item */
+.oneItem{
+  border: 1px dashed gray;
+  background: white;
+  min-width: 100px;
+  height: 100px;
+  padding: 2%;
+  margin: 2%;
+  display: inline-block;
+  cursor: move;
+
+}
+
+.itemsInBox{
+  /* display: inline; */
+  align-self: flex-end;
+}
+
+/* add Item or Box button */
+.addBtn{
+  border: 2px black solid;
+  box-shadow: 1px 1px 1px black;
+
+  border-radius: 15%;
+  font-weight: bolder;
+  font-size: 14px;
+  background: rgb(33, 193, 54);
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+/* Once Items are placed in box */
+.packagedBox{
+  border: 3px double black;
+  max-width: 100%;
+  padding: 2%;
+  display: inline-block;
+  margin: 10px;
+  background: rgb(205, 211, 213);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/*------------------------ Form ---------------------------*/
+.formInput{
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 14px;
+  border-width: 2px;
+}
+
+.formBtn{
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 1px black;
+  
+}
+
+.formDisplay{
+  width: 41%;
+
+  border: 1px black solid;
+  box-shadow: 5px 5px 5px gray;
+  overflow-y: auto;
+  /* overflow: visible; */
+  height: 500px;
+  margin: 2% auto;
+  padding: 2%;
+}
+
+.formSelect{
+  width: 93%;
+  height: 40px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* ---------------------Users---------------------------- */
+.userDisplay{
+  position: fixed;
+  bottom: 10px;
+  width: 250px;
+  margin: auto;
+  left:0;
+  right:0;
+  height: 20%;
+}
