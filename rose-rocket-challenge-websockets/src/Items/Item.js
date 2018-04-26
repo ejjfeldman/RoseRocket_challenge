@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {DragSource} from 'react-dnd';
+import {ItemTypes} from '../ItemTypes';
+
 
 
 //The drag source (passing the data decribing the dragged item)
@@ -70,5 +72,5 @@ Item.propTypes={
     isDropped: PropTypes.bool.isRequired
 };
 
-export default DragSource(props=>props.type, itemSource, collect)(Item);
+export default DragSource(ItemTypes.ITEM, itemSource, collect)(Item);
 

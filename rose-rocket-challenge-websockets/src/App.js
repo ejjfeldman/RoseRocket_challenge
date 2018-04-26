@@ -55,30 +55,30 @@ componentDidMount(){
   });
 
   //assigning user data to anonymous user
-  auth.onAuthStateChanged(authUser=>{ 
-    this.setState(()=>({
-      user:{
-        id: authUser.uid,
-        name:names[Math.floor(Math.random()*(names.length))]}}))
-  })
+    auth.onAuthStateChanged(authUser=>{ 
+      this.setState(()=>({
+        user:{
+          id: authUser.uid,
+          name:names[Math.floor(Math.random()*(names.length))]}}))
+    })
 
   //collecting item data from firebase
   let itemRef = db.ref().child('allItems');
   itemRef.on('value', snap=>{
     let items=snap.val()
-  let newState=[];
-  for( let item in items){
-    newState.push({
-      id: item,
-      name:items[item].name,
-      weight: items[item].weight,
-      type: items[item].type,
-      inBox: items[item].inBox
-    })
-  }
+    let newState=[];
+    for( let item in items){
+      newState.push({
+        id: item,
+        name:items[item].name,
+        weight: items[item].weight,
+        type: items[item].type,
+        inBox: items[item].inBox
+      })
+    }
 
-  //setting state with collected item data
-  this.setState({firebaseItems: newState})
+    //setting state with collected item data
+    this.setState({firebaseItems: newState})
   })
 
   //collecting box data from firebase
